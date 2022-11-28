@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import main
 
+st.markdown("<h1 style='text-align: center; color: red; text-decoration: underline; '><em>Breast Cancer Prediction</em></h1>", unsafe_allow_html=True)
 
 spectra = st.file_uploader("upload file", type={"csv", "txt"})
 if spectra is not None:
