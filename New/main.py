@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 
 def fn(a):
+    cat = ["Benign","Malignant"]
     mod = pickle.load(open('New/model','rb'))
     listt = pickle.load(open('New/dropIdx','rb'))
     scaler = pickle.load(open('New/stdScale','rb'))
@@ -9,5 +10,5 @@ def fn(a):
     a.resize((1,19))
     a = scaler.transform(a)
     pred = mod.predict(a)
-    return pred[0]
+    return cat[pred[0]]
 
